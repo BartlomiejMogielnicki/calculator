@@ -76,6 +76,12 @@ const updateScreen = () => {
     currentOperandEl.innerHTML = currentOperand;
 };
 
+// Swap sign
+const swapNumberSign = () => {
+    currentOperand = currentOperand * -1;
+    updateScreen();
+};
+
 // Event listeners
 // Number buttons
 numberButtons.forEach(button => {
@@ -97,4 +103,15 @@ operationButtons.forEach(button => {
 equalsButton.addEventListener('click', () => {
     compute();
     updateScreen();
+});
+
+// Clear button
+clearButton.addEventListener('click', () => {
+    clear();
+    updateScreen();
+});
+
+// Swap sign button
+swapSign.addEventListener('click', () => {
+    swapNumberSign();
 });

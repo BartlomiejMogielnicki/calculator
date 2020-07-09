@@ -39,6 +39,7 @@ body {
 
 .previous-operand {
     font-size: 1.3rem;
+    text-align: right;
     color: tomato;
 }
 
