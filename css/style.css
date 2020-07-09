@@ -26,7 +26,6 @@ body {
 }
 
 .screen {
-    background-color: black;
     height: 150px;
     width: 100%;
     padding: 10px 20px;
@@ -34,15 +33,16 @@ body {
     grid-template-rows: 1fr 2fr;
     justify-content: right;
     align-items: center;
+    background-color: black;
     color: white;
 }
 
-.operation {
+.previous-operand {
     font-size: 1.3rem;
     color: tomato;
 }
 
-.result {
+.current-operand {
     font-size: 3rem;
     text-align: right;
 }
