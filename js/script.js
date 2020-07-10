@@ -17,14 +17,15 @@ const clear = () => {
 
 clear();
 
-// Input numbers to screen and allow only one comma sign
+// Input numbers to screen and allow only one dot
 const inputNumber = (number) => {
-    if (number === ',' && currentOperand.includes(',')) {
+    if (number === '.' && currentOperand.includes('.')) {
         return;
-    };
+    } else if (number === '.' && currentOperand === '') {
+        return;
+    }
     currentOperand = currentOperand.toString() + number.toString();
 };
-
 
 // Pick math operation
 const pickOperation = (operationSign) => {
@@ -68,11 +69,6 @@ const compute = () => {
     previousOperand = '';
 };
 
-// Compute percent
-const computePercent = () => {
-    currentOperand = (previousOperand * currentOperand) / 100;
-};
-
 // Update previous and current operands on the screen
 const updateScreen = () => {
     currentOperandEl.innerHTML = currentOperand;
@@ -81,6 +77,11 @@ const updateScreen = () => {
     } else {
         previousOperandEl.innerHTML = previousOperand;
     };
+};
+
+// Compute percent
+const computePercent = () => {
+    currentOperand = (previousOperand * currentOperand) / 100;
 };
 
 // Swap sign

@@ -35,6 +35,7 @@ body {
     align-items: center;
     background-color: black;
     color: white;
+    overflow: hidden;
 }
 
 .previous-operand {
